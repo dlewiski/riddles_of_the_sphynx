@@ -1,0 +1,20 @@
+<h1>Can you answer the riddle???</h1>
+
+<form action="/riddle" method="post">
+  <div class="form-group">
+    <label for="riddle1"><%= @new_riddle.current_riddle(1)%></label>
+    <input id="riddle1" name="guess1" class="form-control" type="text">
+    <input id="list_id" name="answer1" type="show" value="<%=  @new_riddle.answer(1) %>">
+  </div>
+  <div class="form-group">
+    <label for="riddle2"><%= @new_riddle.current_riddle(2)%></label>
+    <input id="riddle2" name="guess2" class="form-control" type="text">
+    <input id="list_id" name="answer2" type="show" value="<%=  @new_riddle.answer(2) %>">
+  </div>
+  <div class="form-group">
+    <label for="riddle3"><%= @new_riddle.current_riddle(0)%></label>
+    <input id="riddle3" name="guess3" class="form-control" type="text">
+    <input id="list_id" name="answer3" type="show" value="<%=  @new_riddle.answer(0) %>">
+  </div>
+  <button type="submit" class="btn">Go!</button>
+</form>
